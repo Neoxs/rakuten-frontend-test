@@ -1,25 +1,10 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
-}
+  padding: $spacing-large;
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
-  justify-items: center;
-
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 900px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
+  @media only screen and (max-width: $bp-medium) {
+    padding: $spacing-medium;
   }
 }
 
@@ -28,17 +13,38 @@
   display: flex;
   gap: 1rem;
   border: 1.5px solid rgb(209, 209, 209);
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 0.8rem;
+  padding: $spacing-medium;
   max-width: 343px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  @media only screen and (max-width: $bp-small) {
+    max-width: 100%;
+    padding: $spacing-small;
+    gap: 0.5rem;
+  }
+  @media only screen and (max-width: 300px) {
+    flex-direction: column;
+    max-width: 100%;
+    padding: $spacing-xsmall;
+    gap: 0.3rem;
+  }
+
   &:hover {
     cursor: pointer;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
 
   &__image {
     object-fit: contain;
     width: 120px;
     height: 120px;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 90px; // Smaller image for mobile
+      height: 90px;
+    }
   }
 
   // PRODUCT CONTENT
@@ -51,6 +57,10 @@
     color: $color-brand;
     font-size: $font-size-small;
     font-weight: 600;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 10px;
+    }
   }
 
   &__title {
@@ -58,6 +68,11 @@
     font-size: $font-size-regular;
     font-weight: 600;
     margin-bottom: $spacing-small;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 12px;
+      margin-bottom: $spacing-xsmall;
+    }
   }
 
   //Price
@@ -70,6 +85,11 @@
     line-height: 22px;
     gap: 0.5rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+      gap: 0.3rem;
+      line-height: 14px;
+    }
+
     &__new {
       flex-direction: row-reverse;
     }
@@ -80,6 +100,10 @@
     font-size: $font-size-small;
     font-weight: 400;
 
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 10px;
+    }
+
     &--new {
       color: $color-new-price;
       font-weight: 600;
@@ -89,6 +113,10 @@
   &__price-amount {
     font-size: $font-size-large;
     font-weight: 600;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 18px;
+    }
 
     &--new {
       color: $color-new-price;

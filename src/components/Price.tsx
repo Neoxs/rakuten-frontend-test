@@ -11,7 +11,15 @@ export const Price = ({ label, amount, isNew = false }: PriceProps) => {
         isNew ? 'product-card__price-row--new' : ''
       }`}
     >
-      <span className="product-card__price-label">{label}</span>
+      <span
+        className={`product-card__price-label ${
+          isNew
+            ? 'product-card__price-label--new'
+            : 'product-card__price-label--used'
+        }`}
+      >
+        {label}
+      </span>
       <span
         className={`product-card__price-amount ${
           isNew
