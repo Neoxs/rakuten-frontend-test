@@ -54,7 +54,7 @@ src/
 ├── components/
 │   ├── Price.tsx
 │   ├── ProductCard.tsx
-│   └── ProductCard.types.ts
+│   └── ProductCard.test.tsx
 ├── types/
 │   └── product.ts
 └── styles/
