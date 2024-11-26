@@ -56,7 +56,7 @@ src/
 │   ├── ProductCard.tsx
 │   └── ProductCard.types.ts
 ├── types/
-│   └── product.types.ts
+│   └── product.ts
 └── styles/
     ├── _base.scss
     ├── _variables.scss
