@@ -45,6 +45,8 @@ body {
   border-radius: 8px;
   padding: 16px;
   max-width: 343px; }
+  .product-card:hover {
+    cursor: pointer; }
   .product-card__image {
     object-fit: contain;
     width: 120px;

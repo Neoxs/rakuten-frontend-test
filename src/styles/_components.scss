@@ -31,6 +31,9 @@
   border-radius: 8px;
   padding: 16px;
   max-width: 343px;
+  &:hover {
+    cursor: pointer;
+  }
 
   &__image {
     object-fit: contain;
