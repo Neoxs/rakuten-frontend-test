@@ -90,8 +90,8 @@
       line-height: 14px;
     }
 
-    &__new {
-      flex-direction: row-reverse;
+    &--new {
+      flex-direction: row-reverse !important;
     }
   }
 

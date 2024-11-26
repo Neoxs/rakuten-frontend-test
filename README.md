@@ -1,51 +1,114 @@
-# React + TypeScript + Vite
+# Rakuten-Frontend-Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React implementation of a product card component, created as part of the Rakuten Frontend Technical Test.
 
-Currently, two official plugins are available:
+![Screenshot of the Application](src/assets/img/screenshot-product-card.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js (>= 14.x)
+- npm or yarn
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Neoxs/rakuten-frontend-test.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Navigate to the project directory:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd rakuten-frontend-test
 ```
-# rakuten-frontend-test
+
+3. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Running the Application
+
+1. Start the development server:
+
+```bash
+npm run dev
+# or
+yarn run dev
+```
+
+2. Open your browser and navigate to `http://localhost:5173/`
+
+## Implementation
+
+### Project Structure
+
+```
+src/
+├── components/
+│   ├── Price.tsx
+│   ├── ProductCard.tsx
+│   └── ProductCard.types.ts
+├── types/
+│   └── product.types.ts
+└── styles/
+    ├── _base.scss
+    ├── _variables.scss
+    ├── _components.scss
+    └── main.scss
+```
+
+### Technologies Used
+
+- React with TypeScript
+- SCSS for styling
+- Jest & React Testing Library
+
+### Key Features Implemented
+
+1. **TypeScript Integration**
+
+   - Defined interfaces for props and data types
+   - Strict type checking for component props
+   - Type-safe event handling
+
+2. **Responsive Design**
+
+   - Mobile-first approach
+   - Responsive typography using rem units
+   - Breakpoints for different screen sizes
+
+3. **Component Architecture**
+
+   - Separation of concerns
+   - Reusable Price component
+   - Props validation
+   - Null checking for data
+
+4. **Styling Solution**
+
+   - SCSS variables for consistency
+   - BEM methodology for class naming
+   - Responsive mixins
+   - Maintained provided design specs:
+     - Colors: #333, #696969, #BF0000
+     - Font sizes: 12px, 14px, 20px
+
+5. **Testing**
+   - Jest configuration (Due to time limit still facing some errors)
+   - Component rendering tests
+   - User interaction tests
+   - Null state handling tests
+
+## Bonus Points Achieved
+
+- ✅ TypeScript implementation
+- ✅ Responsive design
+- ✅ Null state handling
+- ✅ Component testing

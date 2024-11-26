@@ -87,8 +87,8 @@ body {
       .product-card__price-row {
         gap: 0.3rem;
         line-height: 14px; } }
-    .product-card__price-row__new {
-      flex-direction: row-reverse; }
+    .product-card__price-row--new {
+      flex-direction: row-reverse !important; }
   .product-card__price-label {
     color: #333;
     font-size: 12px;
